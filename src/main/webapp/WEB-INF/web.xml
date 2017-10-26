@@ -4,12 +4,21 @@
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-    <display-name>SimpleJ2EEProject</display-name>
 
     <listener>
         <listener-class>
             com.teaminternational.web.ContextListener
         </listener-class>
     </listener>
+
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.teaminternational.web.MyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
 </web-app>
